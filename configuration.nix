@@ -66,5 +66,8 @@ in
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than 10d";
   nix.settings.auto-optimise-store = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 }
 
